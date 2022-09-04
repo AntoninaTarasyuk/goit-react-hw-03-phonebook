@@ -12,10 +12,10 @@ export class App extends Component {
   contacts: [],
   filter: '',
   }
- // Loading contacts from local storage
+
   componentDidMount() {
     const savedContacts = localStorage.getItem('contacts');
-    const parsedContacts = JSON.parse(savedContacts)
+    const parsedContacts = JSON.parse(savedContacts);
 
     if (parsedContacts) {
       this.setState({
@@ -23,8 +23,7 @@ export class App extends Component {
       })
     }
   }
-    
-  // Saving contacts to local storage
+
   componentDidUpdate(prevProps, prevState) {
     const { contacts } = this.state;
 
